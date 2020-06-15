@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Area y Perimetro de un circulo</title>
+	<script type="text/javascript">
+		function formula(){ 
+			var pi = Math.PI;
+			var r = parseFloat(document.getElementById("radio").value);
+			document.calculo.area.value = (pi * Math.pow(r,2)).toFixed(4);
+			document.calculo.perimetro.value = (2 * pi * r).toFixed(4);
+		}
+	</script>
+</head>
+<body>
+	<form name="calculo">
+		Radio:<input type="text" id="radio"><br>
+		Area:<input type="text" disabled="disabled" id="area"><br>
+		Perimetro:<input type="text" disabled="disabled" id="perimetro"><br>
+		<button type="button" onclick="formula()">Calcular</button>
+		<button type="reset" value="Borrar">Limpiar</button>
+	</form>
+	
+</body>
+</html>
